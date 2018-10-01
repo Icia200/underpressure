@@ -56,7 +56,7 @@ def update():
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String C:")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String D:")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
