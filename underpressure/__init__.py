@@ -17,7 +17,7 @@ else:
 
 def update(event):
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-U', 'git+git://github.com/Icia200/underpressure'])
-    os.execv(sys.executable, sys.argv + ['--updated'])
+    os.execv(sys.executable, ["python", os.path.realpath(__file__)])
 root.bind("<Button-1>", update)
 
 def pad(l):
@@ -56,7 +56,7 @@ def update():
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String F:")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String G:")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
