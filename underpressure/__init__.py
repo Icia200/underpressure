@@ -2,7 +2,7 @@ from tkinter import Tk, Label
 from datetime import datetime, timedelta
 from re import findall
 
-DEBUG = True
+DEBUG = False
 
 root = Tk()
 root.attributes('-fullscreen', not DEBUG)
