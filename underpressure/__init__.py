@@ -1,7 +1,7 @@
 from tkinter import Tk, Label
 from datetime import datetime, timedelta
 from re import findall
-import subprocess, sys
+import subprocess, sys, os
 
 DEBUG = False
 
@@ -56,7 +56,7 @@ def update():
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String D:")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String E:")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
