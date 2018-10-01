@@ -1,6 +1,7 @@
 from tkinter import Tk, Label
 from datetime import datetime, timedelta
 from re import findall
+import subprocess, sys
 
 DEBUG = False
 
@@ -14,6 +15,10 @@ if DEBUG:
 else:
     eta = datetime(2018, 10, 26, 15, 15, 00)
 
+def update(event):
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-U', 'git+git://github.com/Icia200/underpressure'])
+    os.execv(sys.executable, sys.argv + ['--updated'])
+root.bind("<Button-1>", update)
 
 def pad(l):
     while len(l) <= 5:
@@ -51,7 +56,7 @@ def update():
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String B:")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="Test Update String C:")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
