@@ -1,8 +1,9 @@
 from tkinter import Tk, Label
 from datetime import datetime, timedelta
 from re import findall
+from time import sleep
 import subprocess, sys, os
-import threading, time
+import threading
 
 DEBUG = True
 flag = False
@@ -48,7 +49,7 @@ def stop(nextCycle):
 
 
 def update():
-    global currentColour
+    global currentColour, flag
     newTime   = eta - datetime.now()
     percent   = (timeFrom-(newTime.seconds+newTime.days*3600*24))/timeFrom*255
     newColour = "#"+str(hex(round(percent))[2:].zfill(2))+"0000"
