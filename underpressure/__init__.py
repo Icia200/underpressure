@@ -4,7 +4,7 @@ from re import findall
 import subprocess, sys, os
 import threading, time
 
-DEBUG = False
+DEBUG = True
 flag = False
 
 playlist = []
