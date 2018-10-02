@@ -67,7 +67,7 @@ def update():
     if "".join(newTime) == "00000000":
         stop("red")
         if not flag:
-            playlist.append("Pressure.wav")
+            playlist.append("Pressure.mp3")
             flag = True
     else:
         root.after(200, update)
