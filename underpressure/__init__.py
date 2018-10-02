@@ -2,8 +2,21 @@ from tkinter import Tk, Label
 from datetime import datetime, timedelta
 from re import findall
 import subprocess, sys, os
+import threading, time
 
 DEBUG = False
+flag = False
+
+playlist = []
+class audioThread(threading.thread):
+    def run(self):
+        global playlist
+        while True:
+            if len(playlist) != 0:
+                print(subprocess.check_call(["omxplayer", playlist.pop()]))
+            else:
+                sleep(0.1)
+audioThread().start()
 
 root = Tk()
 root.attributes('-fullscreen', not DEBUG)
@@ -52,6 +65,9 @@ def update():
 
     if "".join(newTime) == "00000000":
         stop("red")
+        if not flag:
+            playlist.append("Alarm1.wav")
+            flag = True
     else:
         root.after(200, update)
 
