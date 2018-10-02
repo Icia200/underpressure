@@ -14,7 +14,7 @@ class audioThread(threading.Thread):
         global playlist
         while True:
             if len(playlist) != 0:
-                print(subprocess.check_call(["omxplayer", playlist.pop()]))
+                print(subprocess.check_call(["omxplayer", __file__ + "/audiofile/" + playlist.pop()]))
             else:
                 sleep(0.1)
 audioThread().start()
@@ -73,7 +73,7 @@ def update():
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline (updateMeB):")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline (updateMeC):")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
