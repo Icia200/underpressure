@@ -15,10 +15,10 @@ if DEBUG:
 else:
     eta = datetime(2018, 10, 26, 15, 15, 00)
 
-def update(event):
+def updateTHEPROGRAM(event):
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '-U', 'git+git://github.com/Icia200/underpressure'])
     os.execv(sys.executable, ["python", os.path.realpath(__file__)])
-root.bind("<Button-1>", update)
+root.bind("<Button-1>", updateTHEPROGRAM)
 
 def pad(l):
     while len(l) <= 5:
