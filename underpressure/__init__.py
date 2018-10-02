@@ -8,7 +8,7 @@ DEBUG = True
 flag = False
 
 playlist = []
-class audioThread(threading.thread):
+class audioThread(threading.Thread):
     def run(self):
         global playlist
         while True:
