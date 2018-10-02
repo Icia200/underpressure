@@ -67,13 +67,13 @@ def update():
     if "".join(newTime) == "00000000":
         stop("red")
         if not flag:
-            playlist.append("Alarm1.wav")
+            playlist.append("Pressure.wav")
             flag = True
     else:
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline (updateMeC):")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline (updateMe):")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
