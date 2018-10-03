@@ -5,8 +5,8 @@ from time import sleep
 import subprocess, sys, os
 import threading
 
-DEBUG = True
-flag = False
+DEBUG = False
+flag = True
 
 playlist = []
 class audioThread(threading.Thread):
@@ -73,7 +73,7 @@ def update():
         root.after(200, update)
 
 
-title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline (updateMe):")
+title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline:")
 timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
 
 title.pack(expand=True)
