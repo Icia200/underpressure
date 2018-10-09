@@ -5,8 +5,8 @@ from time import sleep
 import subprocess, sys, os
 import threading
 
-DEBUG = False
-flag = True
+DEBUG = True
+flag = False
 
 playlist = []
 class audioThread(threading.Thread):
