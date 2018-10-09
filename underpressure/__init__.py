@@ -14,7 +14,7 @@ class audioThread(threading.Thread):
         global playlist
         while True:
             if len(playlist) != 0:
-                print(subprocess.check_call(["omxplayer", "/".join(__file__.split("/")[:-1]) + "/" + playlist.pop()]))
+                print(subprocess.check_call(["omxplayer -o local", "/".join(__file__.split("/")[:-1]) + "/" + playlist.pop()]))
             else:
                 sleep(0.1)
 audioThread().start()
