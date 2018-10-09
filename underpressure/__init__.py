@@ -5,7 +5,7 @@ from time import sleep
 import subprocess, sys, os
 import threading
 
-DEBUG = True
+DEBUG = False
 flag = False
 
 playlist = []
