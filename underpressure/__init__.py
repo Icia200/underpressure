@@ -5,7 +5,7 @@ from time import sleep
 import subprocess, sys, os
 import threading
 
-DEBUG = True
+DEBUG = False
 flag = True
 
 playlist = []
@@ -74,7 +74,7 @@ def update():
 
 
 title = Label(font=("ansifixed", 50), bg="black", fg="white", text="ICT Deadline:")
-timel = Label(font=("ansifixed", 90), bg="black", fg="white", text="")
+timel = Label(font=("ansifixed", 120), bg="black", fg="white", text="")
 
 title.pack(expand=True)
 timel.pack(expand=True)
